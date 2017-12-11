@@ -1,20 +1,19 @@
 //
-//  DUTabbar.swift
+//  DUTabbarItemMain.swift
 //  Scanner Plus
 //
-//  Created by TuanNM on 12/11/17.
+//  Created by Nguyen Manh Tuan on 12/11/17.
 //  Copyright © 2017 TuanNM. All rights reserved.
 //
 
 import UIKit
 
-class DUTabbarView: UIView {
-
-    @IBOutlet weak var item1: DUTabbarItem!
-    @IBOutlet weak var item2: DUTabbarItem!
-    @IBOutlet weak var item3: DUTabbarItem!
-    @IBOutlet weak var item4: DUTabbarItem!
-    @IBOutlet weak var mainItem: DUTabbarItemMain!
+class DUTabbarItemMain: UIView {
+ 
+    @IBOutlet weak var circleView: UIView!
+    @IBOutlet weak var itemName: UILabel!
+    @IBOutlet weak var itemImv: UIImageView!
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -33,7 +32,14 @@ class DUTabbarView: UIView {
             UIViewAutoresizing.flexibleWidth,
             UIViewAutoresizing.flexibleHeight
         ]
+        backgroundColor = UIColor.clear
+        view.backgroundColor = UIColor.clear
         addSubview(view)
+        
+        circleView.backgroundColor = UIColor.red
+        circleView.clipsToBounds = true
+        circleView.layer.cornerRadius = circleView.bounds.width/2
+
     }
     
     // Loads a XIB file into a view and returns this view.
@@ -44,5 +50,3 @@ class DUTabbarView: UIView {
         return view
     }
 }
-
-

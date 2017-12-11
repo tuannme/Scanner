@@ -1,21 +1,15 @@
 //
-//  DUTabbar.swift
+//  DUTabbarItem.swift
 //  Scanner Plus
 //
-//  Created by TuanNM on 12/11/17.
+//  Created by Nguyen Manh Tuan on 12/11/17.
 //  Copyright © 2017 TuanNM. All rights reserved.
 //
 
 import UIKit
 
-class DUTabbarView: UIView {
-
-    @IBOutlet weak var item1: DUTabbarItem!
-    @IBOutlet weak var item2: DUTabbarItem!
-    @IBOutlet weak var item3: DUTabbarItem!
-    @IBOutlet weak var item4: DUTabbarItem!
-    @IBOutlet weak var mainItem: DUTabbarItemMain!
-    
+class DUTabbarItem: UIView {
+ 
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -25,7 +19,7 @@ class DUTabbarView: UIView {
         super.init(coder: aDecoder)
         setupView()
     }
-    
+
     fileprivate func setupView() {
         let view = viewFromNibForClass()
         view.frame = bounds
@@ -43,6 +37,5 @@ class DUTabbarView: UIView {
         let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
         return view
     }
+    
 }
-
-
