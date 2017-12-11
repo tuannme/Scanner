@@ -7,4 +7,5 @@ target 'Scanner Plus' do
 
   pod "IPDFCameraViewController"
 
+
 end

@@ -9,12 +9,15 @@
 /* Begin PBXBuildFile section */
 		CDB1F0E95100E1001BBB0099 /* Pods_Scanner_Plus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E63C5505861BF6012D4CCFFC /* Pods_Scanner_Plus.framework */; };
 		DFD47FFA1FDE56F30064C929 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD47FF91FDE56F30064C929 /* AppDelegate.swift */; };
-		DFD47FFC1FDE56F30064C929 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD47FFB1FDE56F30064C929 /* ViewController.swift */; };
 		DFD47FFF1FDE56F30064C929 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFD47FFD1FDE56F30064C929 /* Main.storyboard */; };
 		DFD480011FDE56F30064C929 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFD480001FDE56F30064C929 /* Assets.xcassets */; };
 		DFD480041FDE56F30064C929 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFD480021FDE56F30064C929 /* LaunchScreen.storyboard */; };
 		DFD4800F1FDE56F40064C929 /* Scanner_PlusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD4800E1FDE56F40064C929 /* Scanner_PlusTests.swift */; };
 		DFD4801A1FDE56F40064C929 /* Scanner_PlusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD480191FDE56F40064C929 /* Scanner_PlusUITests.swift */; };
+		DFD4802B1FDE75010064C929 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD4802A1FDE75010064C929 /* HomeViewController.swift */; };
+		DFD4802D1FDE75160064C929 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD4802C1FDE75160064C929 /* BaseViewController.swift */; };
+		DFD480301FDE75640064C929 /* DUTabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD4802F1FDE75640064C929 /* DUTabbarView.swift */; };
+		DFD480321FDE75740064C929 /* DUTabbarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFD480311FDE75740064C929 /* DUTabbarView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +41,6 @@
 		685C15F73003A10F15F63934 /* Pods-Scanner Plus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scanner Plus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Scanner Plus/Pods-Scanner Plus.debug.xcconfig"; sourceTree = "<group>"; };
 		DFD47FF61FDE56F30064C929 /* Scanner Plus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Scanner Plus.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFD47FF91FDE56F30064C929 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DFD47FFB1FDE56F30064C929 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DFD47FFE1FDE56F30064C929 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DFD480001FDE56F30064C929 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFD480031FDE56F30064C929 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +51,10 @@
 		DFD480151FDE56F40064C929 /* Scanner PlusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Scanner PlusUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFD480191FDE56F40064C929 /* Scanner_PlusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scanner_PlusUITests.swift; sourceTree = "<group>"; };
 		DFD4801B1FDE56F40064C929 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFD4802A1FDE75010064C929 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		DFD4802C1FDE75160064C929 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		DFD4802F1FDE75640064C929 /* DUTabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DUTabbarView.swift; sourceTree = "<group>"; };
+		DFD480311FDE75740064C929 /* DUTabbarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DUTabbarView.xib; sourceTree = "<group>"; };
 		E63C5505861BF6012D4CCFFC /* Pods_Scanner_Plus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Scanner_Plus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF66BE25B492682D94CBFFDE /* Pods-Scanner Plus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scanner Plus.release.xcconfig"; path = "Pods/Target Support Files/Pods-Scanner Plus/Pods-Scanner Plus.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,8 +127,10 @@
 		DFD47FF81FDE56F30064C929 /* Scanner Plus */ = {
 			isa = PBXGroup;
 			children = (
+				DFD480291FDE74E70064C929 /* View */,
+				DFD480281FDE74DF0064C929 /* ViewController */,
+				DFD480271FDE74CF0064C929 /* Model */,
 				DFD47FF91FDE56F30064C929 /* AppDelegate.swift */,
-				DFD47FFB1FDE56F30064C929 /* ViewController.swift */,
 				DFD47FFD1FDE56F30064C929 /* Main.storyboard */,
 				DFD480001FDE56F30064C929 /* Assets.xcassets */,
 				DFD480021FDE56F30064C929 /* LaunchScreen.storyboard */,
@@ -147,6 +155,39 @@
 				DFD4801B1FDE56F40064C929 /* Info.plist */,
 			);
 			path = "Scanner PlusUITests";
+			sourceTree = "<group>";
+		};
+		DFD480271FDE74CF0064C929 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DFD480281FDE74DF0064C929 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DFD4802C1FDE75160064C929 /* BaseViewController.swift */,
+				DFD4802A1FDE75010064C929 /* HomeViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		DFD480291FDE74E70064C929 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DFD4802E1FDE75300064C929 /* UITabbar */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DFD4802E1FDE75300064C929 /* UITabbar */ = {
+			isa = PBXGroup;
+			children = (
+				DFD4802F1FDE75640064C929 /* DUTabbarView.swift */,
+				DFD480311FDE75740064C929 /* DUTabbarView.xib */,
+			);
+			path = UITabbar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +302,7 @@
 			files = (
 				DFD480041FDE56F30064C929 /* LaunchScreen.storyboard in Resources */,
 				DFD480011FDE56F30064C929 /* Assets.xcassets in Resources */,
+				DFD480321FDE75740064C929 /* DUTabbarView.xib in Resources */,
 				DFD47FFF1FDE56F30064C929 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,8 +382,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFD47FFC1FDE56F30064C929 /* ViewController.swift in Sources */,
 				DFD47FFA1FDE56F30064C929 /* AppDelegate.swift in Sources */,
+				DFD4802B1FDE75010064C929 /* HomeViewController.swift in Sources */,
+				DFD480301FDE75640064C929 /* DUTabbarView.swift in Sources */,
+				DFD4802D1FDE75160064C929 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
