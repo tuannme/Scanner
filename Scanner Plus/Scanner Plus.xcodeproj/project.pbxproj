@@ -7,69 +7,69 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		660111ACD7F9784A41624494 /* Pods_Scanner_Plus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C25792B903D928683D037C /* Pods_Scanner_Plus.framework */; };
-		DFD47FC01FDE3E4B0064C929 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD47FBF1FDE3E4B0064C929 /* AppDelegate.swift */; };
-		DFD47FC21FDE3E4B0064C929 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD47FC11FDE3E4B0064C929 /* ViewController.swift */; };
-		DFD47FC51FDE3E4B0064C929 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFD47FC31FDE3E4B0064C929 /* Main.storyboard */; };
-		DFD47FC71FDE3E4B0064C929 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFD47FC61FDE3E4B0064C929 /* Assets.xcassets */; };
-		DFD47FCA1FDE3E4B0064C929 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFD47FC81FDE3E4B0064C929 /* LaunchScreen.storyboard */; };
-		DFD47FD51FDE3E4C0064C929 /* Scanner_PlusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD47FD41FDE3E4C0064C929 /* Scanner_PlusTests.swift */; };
-		DFD47FE01FDE3E4C0064C929 /* Scanner_PlusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD47FDF1FDE3E4C0064C929 /* Scanner_PlusUITests.swift */; };
+		CDB1F0E95100E1001BBB0099 /* Pods_Scanner_Plus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E63C5505861BF6012D4CCFFC /* Pods_Scanner_Plus.framework */; };
+		DFD47FFA1FDE56F30064C929 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD47FF91FDE56F30064C929 /* AppDelegate.swift */; };
+		DFD47FFC1FDE56F30064C929 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD47FFB1FDE56F30064C929 /* ViewController.swift */; };
+		DFD47FFF1FDE56F30064C929 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFD47FFD1FDE56F30064C929 /* Main.storyboard */; };
+		DFD480011FDE56F30064C929 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFD480001FDE56F30064C929 /* Assets.xcassets */; };
+		DFD480041FDE56F30064C929 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFD480021FDE56F30064C929 /* LaunchScreen.storyboard */; };
+		DFD4800F1FDE56F40064C929 /* Scanner_PlusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD4800E1FDE56F40064C929 /* Scanner_PlusTests.swift */; };
+		DFD4801A1FDE56F40064C929 /* Scanner_PlusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD480191FDE56F40064C929 /* Scanner_PlusUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		DFD47FD11FDE3E4C0064C929 /* PBXContainerItemProxy */ = {
+		DFD4800B1FDE56F40064C929 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = DFD47FB41FDE3E4B0064C929 /* Project object */;
+			containerPortal = DFD47FEE1FDE56F30064C929 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = DFD47FBB1FDE3E4B0064C929;
+			remoteGlobalIDString = DFD47FF51FDE56F30064C929;
 			remoteInfo = "Scanner Plus";
 		};
-		DFD47FDC1FDE3E4C0064C929 /* PBXContainerItemProxy */ = {
+		DFD480161FDE56F40064C929 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = DFD47FB41FDE3E4B0064C929 /* Project object */;
+			containerPortal = DFD47FEE1FDE56F30064C929 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = DFD47FBB1FDE3E4B0064C929;
+			remoteGlobalIDString = DFD47FF51FDE56F30064C929;
 			remoteInfo = "Scanner Plus";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		22C25792B903D928683D037C /* Pods_Scanner_Plus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Scanner_Plus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9B4EC547D9BEEB11EA63E92D /* Pods-Scanner Plus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scanner Plus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Scanner Plus/Pods-Scanner Plus.debug.xcconfig"; sourceTree = "<group>"; };
-		B5C6E476E920D0FC7EF7B8CD /* Pods-Scanner Plus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scanner Plus.release.xcconfig"; path = "Pods/Target Support Files/Pods-Scanner Plus/Pods-Scanner Plus.release.xcconfig"; sourceTree = "<group>"; };
-		DFD47FBC1FDE3E4B0064C929 /* Scanner Plus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Scanner Plus.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DFD47FBF1FDE3E4B0064C929 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DFD47FC11FDE3E4B0064C929 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DFD47FC41FDE3E4B0064C929 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DFD47FC61FDE3E4B0064C929 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DFD47FC91FDE3E4B0064C929 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		DFD47FCB1FDE3E4B0064C929 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DFD47FD01FDE3E4C0064C929 /* Scanner PlusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Scanner PlusTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DFD47FD41FDE3E4C0064C929 /* Scanner_PlusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scanner_PlusTests.swift; sourceTree = "<group>"; };
-		DFD47FD61FDE3E4C0064C929 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DFD47FDB1FDE3E4C0064C929 /* Scanner PlusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Scanner PlusUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DFD47FDF1FDE3E4C0064C929 /* Scanner_PlusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scanner_PlusUITests.swift; sourceTree = "<group>"; };
-		DFD47FE11FDE3E4C0064C929 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		685C15F73003A10F15F63934 /* Pods-Scanner Plus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scanner Plus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Scanner Plus/Pods-Scanner Plus.debug.xcconfig"; sourceTree = "<group>"; };
+		DFD47FF61FDE56F30064C929 /* Scanner Plus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Scanner Plus.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFD47FF91FDE56F30064C929 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DFD47FFB1FDE56F30064C929 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DFD47FFE1FDE56F30064C929 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DFD480001FDE56F30064C929 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DFD480031FDE56F30064C929 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DFD480051FDE56F30064C929 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFD4800A1FDE56F40064C929 /* Scanner PlusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Scanner PlusTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFD4800E1FDE56F40064C929 /* Scanner_PlusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scanner_PlusTests.swift; sourceTree = "<group>"; };
+		DFD480101FDE56F40064C929 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFD480151FDE56F40064C929 /* Scanner PlusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Scanner PlusUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFD480191FDE56F40064C929 /* Scanner_PlusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scanner_PlusUITests.swift; sourceTree = "<group>"; };
+		DFD4801B1FDE56F40064C929 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E63C5505861BF6012D4CCFFC /* Pods_Scanner_Plus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Scanner_Plus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF66BE25B492682D94CBFFDE /* Pods-Scanner Plus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scanner Plus.release.xcconfig"; path = "Pods/Target Support Files/Pods-Scanner Plus/Pods-Scanner Plus.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		DFD47FB91FDE3E4B0064C929 /* Frameworks */ = {
+		DFD47FF31FDE56F30064C929 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				660111ACD7F9784A41624494 /* Pods_Scanner_Plus.framework in Frameworks */,
+				CDB1F0E95100E1001BBB0099 /* Pods_Scanner_Plus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DFD47FCD1FDE3E4C0064C929 /* Frameworks */ = {
+		DFD480071FDE56F40064C929 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DFD47FD81FDE3E4C0064C929 /* Frameworks */ = {
+		DFD480121FDE56F40064C929 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -79,72 +79,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0F99DF6C78C541FC6F7B7827 /* Frameworks */ = {
+		5545CD9D6C9A4DD779EBDFA6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				22C25792B903D928683D037C /* Pods_Scanner_Plus.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		868EAAE3FE9D2D8608317BAC /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				9B4EC547D9BEEB11EA63E92D /* Pods-Scanner Plus.debug.xcconfig */,
-				B5C6E476E920D0FC7EF7B8CD /* Pods-Scanner Plus.release.xcconfig */,
+				685C15F73003A10F15F63934 /* Pods-Scanner Plus.debug.xcconfig */,
+				FF66BE25B492682D94CBFFDE /* Pods-Scanner Plus.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		DFD47FB31FDE3E4B0064C929 = {
+		BB45EACF56B6CF87DE218B6E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DFD47FBE1FDE3E4B0064C929 /* Scanner Plus */,
-				DFD47FD31FDE3E4C0064C929 /* Scanner PlusTests */,
-				DFD47FDE1FDE3E4C0064C929 /* Scanner PlusUITests */,
-				DFD47FBD1FDE3E4B0064C929 /* Products */,
-				868EAAE3FE9D2D8608317BAC /* Pods */,
-				0F99DF6C78C541FC6F7B7827 /* Frameworks */,
+				E63C5505861BF6012D4CCFFC /* Pods_Scanner_Plus.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DFD47FED1FDE56F30064C929 = {
+			isa = PBXGroup;
+			children = (
+				DFD47FF81FDE56F30064C929 /* Scanner Plus */,
+				DFD4800D1FDE56F40064C929 /* Scanner PlusTests */,
+				DFD480181FDE56F40064C929 /* Scanner PlusUITests */,
+				DFD47FF71FDE56F30064C929 /* Products */,
+				5545CD9D6C9A4DD779EBDFA6 /* Pods */,
+				BB45EACF56B6CF87DE218B6E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		DFD47FBD1FDE3E4B0064C929 /* Products */ = {
+		DFD47FF71FDE56F30064C929 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DFD47FBC1FDE3E4B0064C929 /* Scanner Plus.app */,
-				DFD47FD01FDE3E4C0064C929 /* Scanner PlusTests.xctest */,
-				DFD47FDB1FDE3E4C0064C929 /* Scanner PlusUITests.xctest */,
+				DFD47FF61FDE56F30064C929 /* Scanner Plus.app */,
+				DFD4800A1FDE56F40064C929 /* Scanner PlusTests.xctest */,
+				DFD480151FDE56F40064C929 /* Scanner PlusUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DFD47FBE1FDE3E4B0064C929 /* Scanner Plus */ = {
+		DFD47FF81FDE56F30064C929 /* Scanner Plus */ = {
 			isa = PBXGroup;
 			children = (
-				DFD47FBF1FDE3E4B0064C929 /* AppDelegate.swift */,
-				DFD47FC11FDE3E4B0064C929 /* ViewController.swift */,
-				DFD47FC31FDE3E4B0064C929 /* Main.storyboard */,
-				DFD47FC61FDE3E4B0064C929 /* Assets.xcassets */,
-				DFD47FC81FDE3E4B0064C929 /* LaunchScreen.storyboard */,
-				DFD47FCB1FDE3E4B0064C929 /* Info.plist */,
+				DFD47FF91FDE56F30064C929 /* AppDelegate.swift */,
+				DFD47FFB1FDE56F30064C929 /* ViewController.swift */,
+				DFD47FFD1FDE56F30064C929 /* Main.storyboard */,
+				DFD480001FDE56F30064C929 /* Assets.xcassets */,
+				DFD480021FDE56F30064C929 /* LaunchScreen.storyboard */,
+				DFD480051FDE56F30064C929 /* Info.plist */,
 			);
 			path = "Scanner Plus";
 			sourceTree = "<group>";
 		};
-		DFD47FD31FDE3E4C0064C929 /* Scanner PlusTests */ = {
+		DFD4800D1FDE56F40064C929 /* Scanner PlusTests */ = {
 			isa = PBXGroup;
 			children = (
-				DFD47FD41FDE3E4C0064C929 /* Scanner_PlusTests.swift */,
-				DFD47FD61FDE3E4C0064C929 /* Info.plist */,
+				DFD4800E1FDE56F40064C929 /* Scanner_PlusTests.swift */,
+				DFD480101FDE56F40064C929 /* Info.plist */,
 			);
 			path = "Scanner PlusTests";
 			sourceTree = "<group>";
 		};
-		DFD47FDE1FDE3E4C0064C929 /* Scanner PlusUITests */ = {
+		DFD480181FDE56F40064C929 /* Scanner PlusUITests */ = {
 			isa = PBXGroup;
 			children = (
-				DFD47FDF1FDE3E4C0064C929 /* Scanner_PlusUITests.swift */,
-				DFD47FE11FDE3E4C0064C929 /* Info.plist */,
+				DFD480191FDE56F40064C929 /* Scanner_PlusUITests.swift */,
+				DFD4801B1FDE56F40064C929 /* Info.plist */,
 			);
 			path = "Scanner PlusUITests";
 			sourceTree = "<group>";
@@ -152,16 +152,16 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DFD47FBB1FDE3E4B0064C929 /* Scanner Plus */ = {
+		DFD47FF51FDE56F30064C929 /* Scanner Plus */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DFD47FE41FDE3E4C0064C929 /* Build configuration list for PBXNativeTarget "Scanner Plus" */;
+			buildConfigurationList = DFD4801E1FDE56F40064C929 /* Build configuration list for PBXNativeTarget "Scanner Plus" */;
 			buildPhases = (
-				B0C62F3EB096CC63CEEECA4A /* [CP] Check Pods Manifest.lock */,
-				DFD47FB81FDE3E4B0064C929 /* Sources */,
-				DFD47FB91FDE3E4B0064C929 /* Frameworks */,
-				DFD47FBA1FDE3E4B0064C929 /* Resources */,
-				3FFC9D41677E057C2B2C7A20 /* [CP] Embed Pods Frameworks */,
-				6289A8E46BBCF7DE1213ADD8 /* [CP] Copy Pods Resources */,
+				605FC7813B09294524BB1B43 /* [CP] Check Pods Manifest.lock */,
+				DFD47FF21FDE56F30064C929 /* Sources */,
+				DFD47FF31FDE56F30064C929 /* Frameworks */,
+				DFD47FF41FDE56F30064C929 /* Resources */,
+				AD28C997499E86DE435F6477 /* [CP] Embed Pods Frameworks */,
+				12EF360B82A14DBB295DF493 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -169,72 +169,72 @@
 			);
 			name = "Scanner Plus";
 			productName = "Scanner Plus";
-			productReference = DFD47FBC1FDE3E4B0064C929 /* Scanner Plus.app */;
+			productReference = DFD47FF61FDE56F30064C929 /* Scanner Plus.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DFD47FCF1FDE3E4C0064C929 /* Scanner PlusTests */ = {
+		DFD480091FDE56F40064C929 /* Scanner PlusTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DFD47FE71FDE3E4C0064C929 /* Build configuration list for PBXNativeTarget "Scanner PlusTests" */;
+			buildConfigurationList = DFD480211FDE56F40064C929 /* Build configuration list for PBXNativeTarget "Scanner PlusTests" */;
 			buildPhases = (
-				DFD47FCC1FDE3E4C0064C929 /* Sources */,
-				DFD47FCD1FDE3E4C0064C929 /* Frameworks */,
-				DFD47FCE1FDE3E4C0064C929 /* Resources */,
+				DFD480061FDE56F40064C929 /* Sources */,
+				DFD480071FDE56F40064C929 /* Frameworks */,
+				DFD480081FDE56F40064C929 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DFD47FD21FDE3E4C0064C929 /* PBXTargetDependency */,
+				DFD4800C1FDE56F40064C929 /* PBXTargetDependency */,
 			);
 			name = "Scanner PlusTests";
 			productName = "Scanner PlusTests";
-			productReference = DFD47FD01FDE3E4C0064C929 /* Scanner PlusTests.xctest */;
+			productReference = DFD4800A1FDE56F40064C929 /* Scanner PlusTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		DFD47FDA1FDE3E4C0064C929 /* Scanner PlusUITests */ = {
+		DFD480141FDE56F40064C929 /* Scanner PlusUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DFD47FEA1FDE3E4C0064C929 /* Build configuration list for PBXNativeTarget "Scanner PlusUITests" */;
+			buildConfigurationList = DFD480241FDE56F40064C929 /* Build configuration list for PBXNativeTarget "Scanner PlusUITests" */;
 			buildPhases = (
-				DFD47FD71FDE3E4C0064C929 /* Sources */,
-				DFD47FD81FDE3E4C0064C929 /* Frameworks */,
-				DFD47FD91FDE3E4C0064C929 /* Resources */,
+				DFD480111FDE56F40064C929 /* Sources */,
+				DFD480121FDE56F40064C929 /* Frameworks */,
+				DFD480131FDE56F40064C929 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DFD47FDD1FDE3E4C0064C929 /* PBXTargetDependency */,
+				DFD480171FDE56F40064C929 /* PBXTargetDependency */,
 			);
 			name = "Scanner PlusUITests";
 			productName = "Scanner PlusUITests";
-			productReference = DFD47FDB1FDE3E4C0064C929 /* Scanner PlusUITests.xctest */;
+			productReference = DFD480151FDE56F40064C929 /* Scanner PlusUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		DFD47FB41FDE3E4B0064C929 /* Project object */ = {
+		DFD47FEE1FDE56F30064C929 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0910;
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = TuanNM;
 				TargetAttributes = {
-					DFD47FBB1FDE3E4B0064C929 = {
+					DFD47FF51FDE56F30064C929 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
 					};
-					DFD47FCF1FDE3E4C0064C929 = {
+					DFD480091FDE56F40064C929 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
-						TestTargetID = DFD47FBB1FDE3E4B0064C929;
+						TestTargetID = DFD47FF51FDE56F30064C929;
 					};
-					DFD47FDA1FDE3E4C0064C929 = {
+					DFD480141FDE56F40064C929 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
-						TestTargetID = DFD47FBB1FDE3E4B0064C929;
+						TestTargetID = DFD47FF51FDE56F30064C929;
 					};
 				};
 			};
-			buildConfigurationList = DFD47FB71FDE3E4B0064C929 /* Build configuration list for PBXProject "Scanner Plus" */;
+			buildConfigurationList = DFD47FF11FDE56F30064C929 /* Build configuration list for PBXProject "Scanner Plus" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -242,37 +242,37 @@
 				en,
 				Base,
 			);
-			mainGroup = DFD47FB31FDE3E4B0064C929;
-			productRefGroup = DFD47FBD1FDE3E4B0064C929 /* Products */;
+			mainGroup = DFD47FED1FDE56F30064C929;
+			productRefGroup = DFD47FF71FDE56F30064C929 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DFD47FBB1FDE3E4B0064C929 /* Scanner Plus */,
-				DFD47FCF1FDE3E4C0064C929 /* Scanner PlusTests */,
-				DFD47FDA1FDE3E4C0064C929 /* Scanner PlusUITests */,
+				DFD47FF51FDE56F30064C929 /* Scanner Plus */,
+				DFD480091FDE56F40064C929 /* Scanner PlusTests */,
+				DFD480141FDE56F40064C929 /* Scanner PlusUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		DFD47FBA1FDE3E4B0064C929 /* Resources */ = {
+		DFD47FF41FDE56F30064C929 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFD47FCA1FDE3E4B0064C929 /* LaunchScreen.storyboard in Resources */,
-				DFD47FC71FDE3E4B0064C929 /* Assets.xcassets in Resources */,
-				DFD47FC51FDE3E4B0064C929 /* Main.storyboard in Resources */,
+				DFD480041FDE56F30064C929 /* LaunchScreen.storyboard in Resources */,
+				DFD480011FDE56F30064C929 /* Assets.xcassets in Resources */,
+				DFD47FFF1FDE56F30064C929 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DFD47FCE1FDE3E4C0064C929 /* Resources */ = {
+		DFD480081FDE56F40064C929 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DFD47FD91FDE3E4C0064C929 /* Resources */ = {
+		DFD480131FDE56F40064C929 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -282,25 +282,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3FFC9D41677E057C2B2C7A20 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Scanner Plus/Pods-Scanner Plus-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/IPDFCameraViewController/IPDFCameraViewController.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IPDFCameraViewController.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Scanner Plus/Pods-Scanner Plus-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6289A8E46BBCF7DE1213ADD8 /* [CP] Copy Pods Resources */ = {
+		12EF360B82A14DBB295DF493 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -315,7 +297,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Scanner Plus/Pods-Scanner Plus-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B0C62F3EB096CC63CEEECA4A /* [CP] Check Pods Manifest.lock */ = {
+		605FC7813B09294524BB1B43 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -333,62 +315,80 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		AD28C997499E86DE435F6477 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Scanner Plus/Pods-Scanner Plus-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/IPDFCameraViewController/IPDFCameraViewController.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IPDFCameraViewController.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Scanner Plus/Pods-Scanner Plus-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		DFD47FB81FDE3E4B0064C929 /* Sources */ = {
+		DFD47FF21FDE56F30064C929 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFD47FC21FDE3E4B0064C929 /* ViewController.swift in Sources */,
-				DFD47FC01FDE3E4B0064C929 /* AppDelegate.swift in Sources */,
+				DFD47FFC1FDE56F30064C929 /* ViewController.swift in Sources */,
+				DFD47FFA1FDE56F30064C929 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DFD47FCC1FDE3E4C0064C929 /* Sources */ = {
+		DFD480061FDE56F40064C929 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFD47FD51FDE3E4C0064C929 /* Scanner_PlusTests.swift in Sources */,
+				DFD4800F1FDE56F40064C929 /* Scanner_PlusTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DFD47FD71FDE3E4C0064C929 /* Sources */ = {
+		DFD480111FDE56F40064C929 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFD47FE01FDE3E4C0064C929 /* Scanner_PlusUITests.swift in Sources */,
+				DFD4801A1FDE56F40064C929 /* Scanner_PlusUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		DFD47FD21FDE3E4C0064C929 /* PBXTargetDependency */ = {
+		DFD4800C1FDE56F40064C929 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DFD47FBB1FDE3E4B0064C929 /* Scanner Plus */;
-			targetProxy = DFD47FD11FDE3E4C0064C929 /* PBXContainerItemProxy */;
+			target = DFD47FF51FDE56F30064C929 /* Scanner Plus */;
+			targetProxy = DFD4800B1FDE56F40064C929 /* PBXContainerItemProxy */;
 		};
-		DFD47FDD1FDE3E4C0064C929 /* PBXTargetDependency */ = {
+		DFD480171FDE56F40064C929 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DFD47FBB1FDE3E4B0064C929 /* Scanner Plus */;
-			targetProxy = DFD47FDC1FDE3E4C0064C929 /* PBXContainerItemProxy */;
+			target = DFD47FF51FDE56F30064C929 /* Scanner Plus */;
+			targetProxy = DFD480161FDE56F40064C929 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		DFD47FC31FDE3E4B0064C929 /* Main.storyboard */ = {
+		DFD47FFD1FDE56F30064C929 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				DFD47FC41FDE3E4B0064C929 /* Base */,
+				DFD47FFE1FDE56F30064C929 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		DFD47FC81FDE3E4B0064C929 /* LaunchScreen.storyboard */ = {
+		DFD480021FDE56F30064C929 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				DFD47FC91FDE3E4B0064C929 /* Base */,
+				DFD480031FDE56F30064C929 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -396,7 +396,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		DFD47FE21FDE3E4C0064C929 /* Debug */ = {
+		DFD4801C1FDE56F40064C929 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -453,7 +453,7 @@
 			};
 			name = Debug;
 		};
-		DFD47FE31FDE3E4C0064C929 /* Release */ = {
+		DFD4801D1FDE56F40064C929 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -503,15 +503,15 @@
 			};
 			name = Release;
 		};
-		DFD47FE51FDE3E4C0064C929 /* Debug */ = {
+		DFD4801F1FDE56F40064C929 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9B4EC547D9BEEB11EA63E92D /* Pods-Scanner Plus.debug.xcconfig */;
+			baseConfigurationReference = 685C15F73003A10F15F63934 /* Pods-Scanner Plus.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = USQFGC88U6;
 				INFOPLIST_FILE = "Scanner Plus/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dream.Scanner-Plus";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -520,15 +520,15 @@
 			};
 			name = Debug;
 		};
-		DFD47FE61FDE3E4C0064C929 /* Release */ = {
+		DFD480201FDE56F40064C929 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B5C6E476E920D0FC7EF7B8CD /* Pods-Scanner Plus.release.xcconfig */;
+			baseConfigurationReference = FF66BE25B492682D94CBFFDE /* Pods-Scanner Plus.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = USQFGC88U6;
 				INFOPLIST_FILE = "Scanner Plus/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dream.Scanner-Plus";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -537,12 +537,13 @@
 			};
 			name = Release;
 		};
-		DFD47FE81FDE3E4C0064C929 /* Debug */ = {
+		DFD480221FDE56F40064C929 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = USQFGC88U6;
 				INFOPLIST_FILE = "Scanner PlusTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dream.Scanner-PlusTests";
@@ -553,12 +554,13 @@
 			};
 			name = Debug;
 		};
-		DFD47FE91FDE3E4C0064C929 /* Release */ = {
+		DFD480231FDE56F40064C929 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = USQFGC88U6;
 				INFOPLIST_FILE = "Scanner PlusTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dream.Scanner-PlusTests";
@@ -569,11 +571,12 @@
 			};
 			name = Release;
 		};
-		DFD47FEB1FDE3E4C0064C929 /* Debug */ = {
+		DFD480251FDE56F40064C929 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = USQFGC88U6;
 				INFOPLIST_FILE = "Scanner PlusUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dream.Scanner-PlusUITests";
@@ -584,11 +587,12 @@
 			};
 			name = Debug;
 		};
-		DFD47FEC1FDE3E4C0064C929 /* Release */ = {
+		DFD480261FDE56F40064C929 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = USQFGC88U6;
 				INFOPLIST_FILE = "Scanner PlusUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dream.Scanner-PlusUITests";
@@ -602,43 +606,43 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DFD47FB71FDE3E4B0064C929 /* Build configuration list for PBXProject "Scanner Plus" */ = {
+		DFD47FF11FDE56F30064C929 /* Build configuration list for PBXProject "Scanner Plus" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DFD47FE21FDE3E4C0064C929 /* Debug */,
-				DFD47FE31FDE3E4C0064C929 /* Release */,
+				DFD4801C1FDE56F40064C929 /* Debug */,
+				DFD4801D1FDE56F40064C929 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DFD47FE41FDE3E4C0064C929 /* Build configuration list for PBXNativeTarget "Scanner Plus" */ = {
+		DFD4801E1FDE56F40064C929 /* Build configuration list for PBXNativeTarget "Scanner Plus" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DFD47FE51FDE3E4C0064C929 /* Debug */,
-				DFD47FE61FDE3E4C0064C929 /* Release */,
+				DFD4801F1FDE56F40064C929 /* Debug */,
+				DFD480201FDE56F40064C929 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DFD47FE71FDE3E4C0064C929 /* Build configuration list for PBXNativeTarget "Scanner PlusTests" */ = {
+		DFD480211FDE56F40064C929 /* Build configuration list for PBXNativeTarget "Scanner PlusTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DFD47FE81FDE3E4C0064C929 /* Debug */,
-				DFD47FE91FDE3E4C0064C929 /* Release */,
+				DFD480221FDE56F40064C929 /* Debug */,
+				DFD480231FDE56F40064C929 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DFD47FEA1FDE3E4C0064C929 /* Build configuration list for PBXNativeTarget "Scanner PlusUITests" */ = {
+		DFD480241FDE56F40064C929 /* Build configuration list for PBXNativeTarget "Scanner PlusUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DFD47FEB1FDE3E4C0064C929 /* Debug */,
-				DFD47FEC1FDE3E4C0064C929 /* Release */,
+				DFD480251FDE56F40064C929 /* Debug */,
+				DFD480261FDE56F40064C929 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = DFD47FB41FDE3E4B0064C929 /* Project object */;
+	rootObject = DFD47FEE1FDE56F30064C929 /* Project object */;
 }

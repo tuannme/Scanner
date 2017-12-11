@@ -2,8 +2,9 @@
 # platform :ios, '9.0'
 
 target 'Scanner Plus' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
 
-use_frameworks!
-pod "IPDFCameraViewController"
+  pod "IPDFCameraViewController"
 
 end
