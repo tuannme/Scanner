@@ -1,36 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DUTabbarItemMain" customModule="Scanner_Plus" customModuleProvider="target">
             <connections>
                 <outlet property="circleView" destination="eyJ-lA-aZV" id="TNG-Ef-e13"/>
-                <outlet property="itemImv" destination="O9G-yq-DEf" id="ltV-vG-Hhx"/>
-                <outlet property="itemName" destination="0cj-jW-etJ" id="XvD-cv-rvT"/>
+                <outlet property="iconImv" destination="O9G-yq-DEf" id="RNj-Wa-dkF"/>
+                <outlet property="textLb" destination="0cj-jW-etJ" id="mce-3P-mVG"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eyJ-lA-aZV">
                     <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="eyJ-lA-aZV" secondAttribute="height" multiplier="1:1" id="aqN-Vs-HYI"/>
+                    </constraints>
                 </view>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home" translatesAutoresizingMaskIntoConstraints="NO" id="O9G-yq-DEf">
-                    <rect key="frame" x="85" y="147" width="30" height="30"/>
+                    <rect key="frame" x="82.5" y="140" width="35" height="35"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="30" id="VTM-QJ-omm"/>
+                        <constraint firstAttribute="width" constant="35" id="VTM-QJ-omm"/>
                         <constraint firstAttribute="width" secondItem="O9G-yq-DEf" secondAttribute="height" multiplier="1:1" id="bYq-6l-GAT"/>
                     </constraints>
                 </imageView>
@@ -43,17 +45,15 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="eyJ-lA-aZV" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="7xx-oq-qKG"/>
-                <constraint firstItem="eyJ-lA-aZV" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="87J-V4-RUx"/>
+                <constraint firstAttribute="bottom" secondItem="eyJ-lA-aZV" secondAttribute="bottom" id="3cN-u6-5gt"/>
+                <constraint firstItem="eyJ-lA-aZV" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="8uy-bv-bJD"/>
                 <constraint firstItem="O9G-yq-DEf" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="CDI-nj-Zge"/>
-                <constraint firstItem="0cj-jW-etJ" firstAttribute="top" secondItem="O9G-yq-DEf" secondAttribute="bottom" constant="5" id="Id1-wI-N8u"/>
+                <constraint firstItem="0cj-jW-etJ" firstAttribute="top" secondItem="O9G-yq-DEf" secondAttribute="bottom" constant="7" id="Id1-wI-N8u"/>
                 <constraint firstItem="0cj-jW-etJ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="MXK-mO-ire"/>
-                <constraint firstItem="eyJ-lA-aZV" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="hyR-jV-ntS"/>
-                <constraint firstItem="eyJ-lA-aZV" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="vE1-ae-aOZ"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="0cj-jW-etJ" secondAttribute="bottom" constant="3" id="zqC-bs-GCy"/>
+                <constraint firstItem="eyJ-lA-aZV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ncM-pD-1q5"/>
+                <constraint firstAttribute="bottom" secondItem="0cj-jW-etJ" secondAttribute="bottom" constant="3" id="zqC-bs-GCy"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
         </view>
     </objects>
     <resources>

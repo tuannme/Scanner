@@ -1,15 +1,15 @@
 //
-//  DUTabbarItem.swift
+//  BaseCustomView.swift
 //  Scanner Plus
 //
-//  Created by Nguyen Manh Tuan on 12/11/17.
+//  Created by TuanNM on 12/12/17.
 //  Copyright © 2017 TuanNM. All rights reserved.
 //
 
 import UIKit
 
-class DUTabbarItem: UIView {
- 
+class DUBaseCustomView: UIView {
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -19,14 +19,15 @@ class DUTabbarItem: UIView {
         super.init(coder: aDecoder)
         setupView()
     }
-
-    fileprivate func setupView() {
+    
+    internal func setupView() {
         let view = viewFromNibForClass()
         view.frame = bounds
         view.autoresizingMask = [
             UIViewAutoresizing.flexibleWidth,
             UIViewAutoresizing.flexibleHeight
         ]
+        view.backgroundColor = UIColor.clear
         addSubview(view)
     }
     
@@ -37,5 +38,5 @@ class DUTabbarItem: UIView {
         let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
         return view
     }
-    
+
 }
