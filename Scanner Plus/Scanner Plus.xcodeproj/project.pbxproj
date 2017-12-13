@@ -12,6 +12,7 @@
 		CA71EA321FE02A16002DCFA9 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA71EA311FE02A16002DCFA9 /* ScannerViewController.swift */; };
 		CA71EA341FE02F2A002DCFA9 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA71EA331FE02F2A002DCFA9 /* UIApplication.swift */; };
 		CA71EA361FE035DE002DCFA9 /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA71EA351FE035DE002DCFA9 /* DrawView.swift */; };
+		CA96FDCB1FE19B0D004DF4D3 /* DUAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA96FDCA1FE19B0D004DF4D3 /* DUAlertView.swift */; };
 		CAC46D3E1FDEB528004FC7D4 /* DUTabbarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC46D3D1FDEB528004FC7D4 /* DUTabbarItem.swift */; };
 		CAC46D411FDEB5E0004FC7D4 /* DUTabbarItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAC46D401FDEB5E0004FC7D4 /* DUTabbarItem.xib */; };
 		CAC46D431FDEB9C6004FC7D4 /* DUTabbarItemMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC46D421FDEB9C6004FC7D4 /* DUTabbarItemMain.swift */; };
@@ -65,6 +66,7 @@
 		CA71EA311FE02A16002DCFA9 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		CA71EA331FE02F2A002DCFA9 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIApplication.swift; path = Extentsion/UIApplication.swift; sourceTree = SOURCE_ROOT; };
 		CA71EA351FE035DE002DCFA9 /* DrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
+		CA96FDCA1FE19B0D004DF4D3 /* DUAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DUAlertView.swift; sourceTree = "<group>"; };
 		CAC46D3D1FDEB528004FC7D4 /* DUTabbarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DUTabbarItem.swift; sourceTree = "<group>"; };
 		CAC46D401FDEB5E0004FC7D4 /* DUTabbarItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DUTabbarItem.xib; sourceTree = "<group>"; };
 		CAC46D421FDEB9C6004FC7D4 /* DUTabbarItemMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DUTabbarItemMain.swift; sourceTree = "<group>"; };
@@ -210,9 +212,18 @@
 		CA71EA391FE04DC8002DCFA9 /* Tabbar */ = {
 			isa = PBXGroup;
 			children = (
+				CA96FDC91FE19AD8004DF4D3 /* View */,
 				DF2AC0AB1FDF772600583152 /* DUTabbarViewController.swift */,
 			);
 			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		CA96FDC91FE19AD8004DF4D3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DFD4802E1FDE75300064C929 /* UITabbar */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		CAC46D3F1FDEB596004FC7D4 /* Items */ = {
@@ -399,7 +410,7 @@
 		DFD480291FDE74E70064C929 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				DFD4802E1FDE75300064C929 /* UITabbar */,
+				CA96FDCA1FE19B0D004DF4D3 /* DUAlertView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -628,6 +639,7 @@
 				DFD480301FDE75640064C929 /* DUTabbarView.swift in Sources */,
 				CA71EA321FE02A16002DCFA9 /* ScannerViewController.swift in Sources */,
 				DF2AC0AC1FDF772600583152 /* DUTabbarViewController.swift in Sources */,
+				CA96FDCB1FE19B0D004DF4D3 /* DUAlertView.swift in Sources */,
 				DFD4802D1FDE75160064C929 /* BaseViewController.swift in Sources */,
 				CA71EA301FE0264A002DCFA9 /* CirclePointView.swift in Sources */,
 				CAC46D3E1FDEB528004FC7D4 /* DUTabbarItem.swift in Sources */,

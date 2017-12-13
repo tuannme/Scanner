@@ -52,9 +52,7 @@ class DUImageCropViewController: UIViewController {
     }
     
     @objc func retakeAction(){
-        guard image != nil else{return}
-        let newImage = UIImage().cropImage(image: image!, path: drawView.bezierPath)
-        imageContainer.image = newImage
+
     }
     
     @objc func keepScanAction(){

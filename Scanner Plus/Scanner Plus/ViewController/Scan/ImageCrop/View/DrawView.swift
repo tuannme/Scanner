@@ -10,11 +10,18 @@ import UIKit
 
 class DrawView: UIView {
 
+    enum Side:String{
+        case Left
+        case Right
+        case InLine
+    }
+    
     var circleViews : [CirclePointView] = []
-    let bezierPath:UIBezierPath = UIBezierPath()
+    let size:CGFloat = 30
     
     private var moveView:CirclePointView?
-    let size:CGFloat = 30
+    private let bezierPath:UIBezierPath = UIBezierPath()
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -56,12 +63,45 @@ class DrawView: UIView {
             
             switch moveView{
             case circleViews[0]:
+                let side1 = checkPointSideOfLine(checkPoint: circleViews[0].center,
+                                     firstPoint: circleViews[1].center,
+                                     endPoint: circleViews[2].center)
+                
+                let side2 = checkPointSideOfLine(checkPoint: circleViews[0].center,
+                                     firstPoint: circleViews[2].center,
+                                     endPoint: circleViews[3].center)
+                
+                print("side1 \(side1.rawValue) __ side2 \(side2.rawValue)")
+                
                 break
             case circleViews[1]:
+                checkPointSideOfLine(checkPoint: circleViews[1].center,
+                                     firstPoint: circleViews[2].center,
+                                     endPoint: circleViews[3].center)
+                
+                checkPointSideOfLine(checkPoint: circleViews[1].center,
+                                     firstPoint: circleViews[0].center,
+                                     endPoint: circleViews[3].center)
+                
                 break
             case circleViews[2]:
+                checkPointSideOfLine(checkPoint: circleViews[2].center,
+                                     firstPoint: circleViews[3].center,
+                                     endPoint: circleViews[0].center)
+                
+                checkPointSideOfLine(checkPoint: circleViews[2].center,
+                                     firstPoint: circleViews[0].center,
+                                     endPoint: circleViews[1].center)
+                
                 break
             case circleViews[3]:
+                checkPointSideOfLine(checkPoint: circleViews[3].center,
+                                     firstPoint: circleViews[0].center,
+                                     endPoint: circleViews[1].center)
+                
+                checkPointSideOfLine(checkPoint: circleViews[3].center,
+                                     firstPoint: circleViews[1].center,
+                                     endPoint: circleViews[2].center)
                 break
             default:
                 break
@@ -70,6 +110,20 @@ class DrawView: UIView {
             moveView.center = touch
             setNeedsDisplay()
         }
+    }
+    
+    fileprivate func checkPointSideOfLine(checkPoint:CGPoint,firstPoint:CGPoint,endPoint:CGPoint) -> Side{
+        let d = (checkPoint.x - firstPoint.x)*(endPoint.y - firstPoint.y) - (checkPoint.y - firstPoint.y)*(endPoint.x - endPoint.y)
+        if d == 0 {
+            //print("InLine")
+            return .InLine
+        }
+        if d > 0{
+            //print("Right")
+            return .Left
+        }
+        //print("Left")
+        return .Right
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -105,7 +159,7 @@ class DrawView: UIView {
         
     }
     
-    func borderBackgroundView(){
+    fileprivate func borderBackgroundView(){
         
         let topLeft = CGPoint(x: 0, y: 0)
         let topRight = CGPoint(x: frame.width, y: 0)

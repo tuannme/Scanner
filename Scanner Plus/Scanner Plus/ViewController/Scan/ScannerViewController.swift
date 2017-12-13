@@ -16,7 +16,11 @@ class ScannerViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func cropImageAction(_ sender: Any) {
-        
+        /*
+        let cameraVc = DUCameraViewController()
+        cameraVc.view.frame = UIScreen.main.bounds
+        navigationController?.pushViewController(cameraVc, animated: true)
+         */
         let cropImageVC = DUImageCropViewController()
         cropImageVC.image = #imageLiteral(resourceName: "background")
         cropImageVC.points = [CGPoint(x: 50, y: 100),
@@ -25,7 +29,7 @@ class ScannerViewController: UIViewController {
                               CGPoint(x: 40, y: 500)]
         
         self.navigationController?.pushViewController(cropImageVC, animated: true)
-        
+ 
     }
     
     override func didReceiveMemoryWarning() {

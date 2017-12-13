@@ -31,6 +31,10 @@ class HomeViewController: DUTabbarViewController {
             let indexPath = IndexPath(item: index, section: 0)
             self.collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: false)
         }
+        
+        self.collectionView.scrollToItem(at: IndexPath(item: 2, section: 0), at: .centeredHorizontally, animated: false)
+        tabbarView.setSelectPageIndex(index: 2)
+        
     }
     
     override func didChangePage(index: Int) {

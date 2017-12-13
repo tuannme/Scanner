@@ -54,7 +54,8 @@ class DUCameraViewController: UIViewController {
     private var borderDetectFrame = false
     private var isCapturing = false
     private var imageDedectionConfidence:CGFloat = 0
-    private let bytesPerPixel = 8
+    private let bytesPerPixel:Int = 8
+    private var borderDetectLastRectangleFeature:Quadrangle?
     
     private var detector:CIDetector = CIDetector(ofType: CIDetectorTypeRectangle, context: nil, options: [CIDetectorAccuracy:CIDetectorAccuracyHigh])!
 
@@ -66,6 +67,16 @@ class DUCameraViewController: UIViewController {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(self.moveBackground), name: Notification.Name.UIApplicationWillResignActive, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.moveForeGround), name: Notification.Name.UIApplicationDidBecomeActive, object: nil)
+        view.backgroundColor = UIColor.gray
+        
+        setUpCamera()
+        isBorderDetectionEnabled = true
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        startCamera()
     }
     
     @objc fileprivate func moveBackground(){
@@ -110,7 +121,7 @@ class DUCameraViewController: UIViewController {
     }
     
     fileprivate func filteredImageUsingContrastFilterOnImage(image:CIImage) -> CIImage? {
-        let filter = CIFilter(name: "CIColorControls", withInputParameters: [kCIInputImageKey:image,"kCIInputImageKey":1.1])
+        let filter = CIFilter(name: "CIColorControls", withInputParameters: [kCIInputImageKey:image,"inputContrast":1.1])
         return filter?.outputImage
     }
     
@@ -178,15 +189,43 @@ class DUCameraViewController: UIViewController {
         return angle
     }
 
+    fileprivate func drawHighlightOverlayForPoints(image:CIImage,rect:Quadrangle)->CIImage{
+        var overlay:CIImage = CIImage(color: CIColor(red: 1, green: 0, blue: 0, alpha: 0.5))
+        
+        overlay = overlay.cropped(to: image.extent)
+        overlay = overlay.applyingFilter("CIPerspectiveTransformWithExtent",
+                                         parameters: ["inputExtent":CIVector(cgRect: image.extent),
+                                                      "inputTopLeft":CIVector(cgPoint: rect.topLeft!),
+                                                      "inputTopRight":CIVector(cgPoint: rect.topRight!),
+                                                      "inputBottomLeft":CIVector(cgPoint: rect.bottomLeft!),
+                                                      "inputBottomRight":CIVector(cgPoint: rect.bottomRight!)])
+    
+        return overlay.composited(over: image)
+    }
+ 
+    fileprivate func cropRectForPreviewImage(image:CIImage)->CGRect{
+        
+        var cropWidth = image.extent.size.width
+        var cropHeight = image.extent.size.height
+        if image.extent.size.width > image.extent.size.height{
+            cropHeight = cropWidth*view.bounds.size.height/view.bounds.size.width
+        }else if image.extent.size.width < image.extent.size.height{
+            cropWidth = cropHeight*view.bounds.size.width/view.bounds.size.height
+        }
+        return image.extent.insetBy(dx: (image.extent.size.width - cropWidth)/2, dy: (image.extent.size.height - cropHeight)/2)
+    }
+    
 }
 
 extension DUCameraViewController{
     // setup camera
     open func setUpCamera(){
         setUpGLKView()
-        coreImageContext = CIContext(cgContext: context as! CGContext, options: [kCIContextWorkingColorSpace:NSNull(),kCIContextUseSoftwareRenderer:false])
         
-        guard let device = AVCaptureDevice.devices(for: .video).last else{return}
+        coreImageContext = CIContext(eaglContext: context, options: [kCIContextWorkingColorSpace:NSNull(),kCIContextUseSoftwareRenderer:false])
+        
+
+        guard let device = AVCaptureDevice.devices(for: .video).first else{return}
         captureDevice = device
         
         do{
@@ -296,7 +335,8 @@ extension DUCameraViewController{
             print("focusAtPoint" + error.localizedDescription)
         }
     }
-    open func captureImageWith(completionHander:(_ image:UIImage)->()){
+    
+    open func captureImageWith(completionHander:@escaping (_ image:CGImage?,_ rectange:Quadrangle?)->()){
         captureQueue.suspend()
         
         var videoConnection:AVCaptureConnection?
@@ -350,28 +390,81 @@ extension DUCameraViewController{
             
             if let outputImage = transform?.outputImage{
                 enhancedImage = outputImage
-
             }
             
             if enhancedImage.extent.isEmpty {return}
             
             var bounds = enhancedImage.extent.size
-            bounds = CGSize(width: floorf(Float(bounds.width/4)) * 4, height: floorf(Float(bounds.height/4)) * 4)
+            bounds = CGSize(width: CGFloat(floorf(Float(bounds.width/4)) * 4), height: CGFloat(floorf(Float(bounds.height/4)) * 4))
             let extent = CGRect(x: enhancedImage.extent.origin.x, y: enhancedImage.extent.origin.y, width: bounds.width, height: bounds.height)
             
-            let rowBytes:uint = bytesPerPixel * bounds.width
-            let totalBytes:uint = rowBytes * bounds.height
-            let byteBuffer = malloc(totalBytes)
+            let rowBytes:Int = _self.bytesPerPixel * Int(bounds.width)
+            let totalBytes:Int = rowBytes * Int(bounds.height)
+            let byteBuffer = malloc(totalBytes)!
             
             let colorSpace = CGColorSpaceCreateDeviceRGB()
+            
+            _self.ciContext.render(enhancedImage, toBitmap: byteBuffer, rowBytes: rowBytes, bounds: extent, format: kCIFormatRGBA8, colorSpace: colorSpace)
+            let bitmapContext:CGContext = CGContext.init(data: byteBuffer, width: Int(bounds.width), height: Int(bounds.height), bitsPerComponent: _self.bytesPerPixel, bytesPerRow: rowBytes, space: colorSpace, bitmapInfo: 5)!
+            
+            let ciImage = bitmapContext.makeImage()
+            
+            DispatchQueue.main.async {
+                completionHander(ciImage,rectange)
+                _self.captureQueue.resume()
+            }
         }
-        
-        
     }
-    
 }
 
 extension DUCameraViewController:AVCaptureVideoDataOutputSampleBufferDelegate{
     
+    func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection){
+        
+        if (forceStop || isStopped || isCapturing || !CMSampleBufferIsValid(sampleBuffer)){
+            return
+        }
+        
+        guard let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else{return}
+        var image = CIImage(cvPixelBuffer: pixelBuffer)
+        if cameraType == .Normal{
+            if let _image = filteredImageUsingContrastFilterOnImage(image: image){
+                image = _image
+            }
+        }else{
+            if let _image = filteredImageUsingEnhanceFilterOnImage(image: image){
+                image = _image
+            }
+        }
+        
+        if isBorderDetectionEnabled{
+            if borderDetectFrame{
+                borderDetectLastRectangleFeature = biggestRectangleInRectangles(rectangles: detector.features(in: image))
+                borderDetectFrame = false
+            }
+            
+            if let rectange = borderDetectLastRectangleFeature{
+                imageDedectionConfidence += 0.5
+                image = drawHighlightOverlayForPoints(image: image, rect: rectange)
+            }else{
+                imageDedectionConfidence = 0
+            }
+        }
+        
+        if context != EAGLContext.current(){
+            EAGLContext.setCurrent(context)
+        }
+        glkView.bindDrawable()
+        coreImageContext.draw(image, in: view.bounds, from: cropRectForPreviewImage(image: image))
+        glkView.display()
+        
+        if intrinsicContentSize.width != image.extent.size.width{
+            intrinsicContentSize = image.extent.size
+            DispatchQueue.main.async {
+                self.view.invalidateIntrinsicContentSize()
+            }
+        }
+        
+    }
 }
 
