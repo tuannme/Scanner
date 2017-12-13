@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA563B9A1FE024CC0060DE7F /* DUImageCropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA563B991FE024CC0060DE7F /* DUImageCropViewController.swift */; };
+		CA71EA301FE0264A002DCFA9 /* CirclePointView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA71EA2F1FE0264A002DCFA9 /* CirclePointView.swift */; };
+		CA71EA321FE02A16002DCFA9 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA71EA311FE02A16002DCFA9 /* ScannerViewController.swift */; };
+		CA71EA341FE02F2A002DCFA9 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA71EA331FE02F2A002DCFA9 /* UIApplication.swift */; };
+		CA71EA361FE035DE002DCFA9 /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA71EA351FE035DE002DCFA9 /* DrawView.swift */; };
 		CAC46D3E1FDEB528004FC7D4 /* DUTabbarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC46D3D1FDEB528004FC7D4 /* DUTabbarItem.swift */; };
 		CAC46D411FDEB5E0004FC7D4 /* DUTabbarItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAC46D401FDEB5E0004FC7D4 /* DUTabbarItem.xib */; };
 		CAC46D431FDEB9C6004FC7D4 /* DUTabbarItemMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC46D421FDEB9C6004FC7D4 /* DUTabbarItemMain.swift */; };
@@ -53,6 +58,11 @@
 
 /* Begin PBXFileReference section */
 		685C15F73003A10F15F63934 /* Pods-Scanner Plus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scanner Plus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Scanner Plus/Pods-Scanner Plus.debug.xcconfig"; sourceTree = "<group>"; };
+		CA563B991FE024CC0060DE7F /* DUImageCropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DUImageCropViewController.swift; sourceTree = "<group>"; };
+		CA71EA2F1FE0264A002DCFA9 /* CirclePointView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirclePointView.swift; sourceTree = "<group>"; };
+		CA71EA311FE02A16002DCFA9 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
+		CA71EA331FE02F2A002DCFA9 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIApplication.swift; path = Extentsion/UIApplication.swift; sourceTree = SOURCE_ROOT; };
+		CA71EA351FE035DE002DCFA9 /* DrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
 		CAC46D3D1FDEB528004FC7D4 /* DUTabbarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DUTabbarItem.swift; sourceTree = "<group>"; };
 		CAC46D401FDEB5E0004FC7D4 /* DUTabbarItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DUTabbarItem.xib; sourceTree = "<group>"; };
 		CAC46D421FDEB9C6004FC7D4 /* DUTabbarItemMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DUTabbarItemMain.swift; sourceTree = "<group>"; };
@@ -130,6 +140,75 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CA563B971FE024650060DE7F /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				DFD4802F1FDE75640064C929 /* DUTabbarView.swift */,
+				DFD480311FDE75740064C929 /* DUTabbarView.xib */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		CA563B981FE024780060DE7F /* Scan */ = {
+			isa = PBXGroup;
+			children = (
+				CA71EA311FE02A16002DCFA9 /* ScannerViewController.swift */,
+				CA563B9B1FE025D50060DE7F /* ImageCrop */,
+			);
+			path = Scan;
+			sourceTree = "<group>";
+		};
+		CA563B9B1FE025D50060DE7F /* ImageCrop */ = {
+			isa = PBXGroup;
+			children = (
+				CA563B9D1FE025E70060DE7F /* Controller */,
+				CA563B9C1FE025E10060DE7F /* View */,
+			);
+			path = ImageCrop;
+			sourceTree = "<group>";
+		};
+		CA563B9C1FE025E10060DE7F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CA71EA2F1FE0264A002DCFA9 /* CirclePointView.swift */,
+				CA71EA351FE035DE002DCFA9 /* DrawView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CA563B9D1FE025E70060DE7F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CA563B991FE024CC0060DE7F /* DUImageCropViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CA71EA371FE03A2C002DCFA9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CA71EA381FE03A31002DCFA9 /* Extentsion */,
+			);
+			name = Utils;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		CA71EA381FE03A31002DCFA9 /* Extentsion */ = {
+			isa = PBXGroup;
+			children = (
+				CA71EA331FE02F2A002DCFA9 /* UIApplication.swift */,
+			);
+			path = Extentsion;
+			sourceTree = "<group>";
+		};
+		CA71EA391FE04DC8002DCFA9 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				DF2AC0AB1FDF772600583152 /* DUTabbarViewController.swift */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
 		CAC46D3F1FDEB596004FC7D4 /* Items */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,12 +223,11 @@
 			isa = PBXGroup;
 			children = (
 				DFD4802A1FDE75010064C929 /* HomeViewController.swift */,
-				DF2AC0AB1FDF772600583152 /* DUTabbarViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
 		};
-		DF2AC0AD1FDF88CD00583152 /* AnimModel */ = {
+		DF2AC0AD1FDF88CD00583152 /* Anim */ = {
 			isa = PBXGroup;
 			children = (
 				DF2AC0AE1FDF88ED00583152 /* DUItemAnimation.swift */,
@@ -159,7 +237,7 @@
 				DF2AC0BC1FDFB9A100583152 /* TransitionAnim */,
 				DF2AC0B01FDF89E700583152 /* RotationAnim */,
 			);
-			path = AnimModel;
+			path = Anim;
 			sourceTree = "<group>";
 		};
 		DF2AC0B01FDF89E700583152 /* RotationAnim */ = {
@@ -170,12 +248,12 @@
 			path = RotationAnim;
 			sourceTree = "<group>";
 		};
-		DF2AC0B41FDF900600583152 /* BaseController */ = {
+		DF2AC0B41FDF900600583152 /* Base */ = {
 			isa = PBXGroup;
 			children = (
 				DFD4802C1FDE75160064C929 /* BaseViewController.swift */,
 			);
-			path = BaseController;
+			path = Base;
 			sourceTree = "<group>";
 		};
 		DF2AC0B91FDFA45400583152 /* Base */ = {
@@ -262,9 +340,9 @@
 		DFD47FF81FDE56F30064C929 /* Scanner Plus */ = {
 			isa = PBXGroup;
 			children = (
+				CA71EA371FE03A2C002DCFA9 /* Utils */,
 				DFD480291FDE74E70064C929 /* View */,
 				DFD480281FDE74DF0064C929 /* ViewController */,
-				DFD480271FDE74CF0064C929 /* Model */,
 				DFD47FF91FDE56F30064C929 /* AppDelegate.swift */,
 				DFD47FFD1FDE56F30064C929 /* Main.storyboard */,
 				DFD480001FDE56F30064C929 /* Assets.xcassets */,
@@ -293,17 +371,12 @@
 			path = "Scanner PlusUITests";
 			sourceTree = "<group>";
 		};
-		DFD480271FDE74CF0064C929 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		DFD480281FDE74DF0064C929 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				DF2AC0B41FDF900600583152 /* BaseController */,
+				DF2AC0B41FDF900600583152 /* Base */,
+				CA71EA391FE04DC8002DCFA9 /* Tabbar */,
+				CA563B981FE024780060DE7F /* Scan */,
 				DF2AC0A81FDF744E00583152 /* Home */,
 			);
 			path = ViewController;
@@ -320,10 +393,9 @@
 		DFD4802E1FDE75300064C929 /* UITabbar */ = {
 			isa = PBXGroup;
 			children = (
-				DF2AC0AD1FDF88CD00583152 /* AnimModel */,
+				CA563B971FE024650060DE7F /* Tabbar */,
+				DF2AC0AD1FDF88CD00583152 /* Anim */,
 				CAC46D3F1FDEB596004FC7D4 /* Items */,
-				DFD4802F1FDE75640064C929 /* DUTabbarView.swift */,
-				DFD480311FDE75740064C929 /* DUTabbarView.xib */,
 			);
 			path = UITabbar;
 			sourceTree = "<group>";
@@ -529,14 +601,19 @@
 				DF2AC0BE1FDFB9BA00583152 /* DUTransitionAnimation.swift in Sources */,
 				CAC46D431FDEB9C6004FC7D4 /* DUTabbarItemMain.swift in Sources */,
 				DF2AC0B61FDF902E00583152 /* DUBaseCustomView.swift in Sources */,
+				CA71EA361FE035DE002DCFA9 /* DrawView.swift in Sources */,
 				DFD47FFA1FDE56F30064C929 /* AppDelegate.swift in Sources */,
 				DFD4802B1FDE75010064C929 /* HomeViewController.swift in Sources */,
+				CA71EA341FE02F2A002DCFA9 /* UIApplication.swift in Sources */,
 				DF2AC0C41FDFBA0F00583152 /* DUFumeAnimation.swift in Sources */,
+				CA563B9A1FE024CC0060DE7F /* DUImageCropViewController.swift in Sources */,
 				DF2AC0B21FDF8A1600583152 /* DURotationAnimation.swift in Sources */,
 				DF2AC0C71FDFC84A00583152 /* DUFrameAnimation.swift in Sources */,
 				DFD480301FDE75640064C929 /* DUTabbarView.swift in Sources */,
+				CA71EA321FE02A16002DCFA9 /* ScannerViewController.swift in Sources */,
 				DF2AC0AC1FDF772600583152 /* DUTabbarViewController.swift in Sources */,
 				DFD4802D1FDE75160064C929 /* BaseViewController.swift in Sources */,
+				CA71EA301FE0264A002DCFA9 /* CirclePointView.swift in Sources */,
 				CAC46D3E1FDEB528004FC7D4 /* DUTabbarItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
