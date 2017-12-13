@@ -12,8 +12,9 @@ class DUImageCropViewController: UIViewController {
 
     var points:[CGPoint] = []
     var image:UIImage?
-    var drawView = DrawView(frame: UIScreen.main.bounds)
-
+    let drawView = DrawView(frame: UIScreen.main.bounds)
+    let imageContainer = UIImageView(frame: UIScreen.main.bounds)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,7 +23,6 @@ class DUImageCropViewController: UIViewController {
         view.backgroundColor = UIColor.darkGray
         
         //add imageView
-        let imageContainer = UIImageView(frame: UIScreen.main.bounds)
         imageContainer.contentMode = .scaleAspectFit
         imageContainer.image = image
         view.addSubview(imageContainer)
@@ -30,7 +30,7 @@ class DUImageCropViewController: UIViewController {
         // add drawView
         self.view.addSubview(drawView)
         drawView.addPoints(points: points)
-        
+    
         // add barView
         let barView = UIView()
         barView.frame = CGRect(x: 0, y: UIScreen.main.bounds.height - 50, width: UIScreen.main.bounds.width, height: 50)
@@ -44,12 +44,20 @@ class DUImageCropViewController: UIViewController {
         
         retakeBtn.setTitle("Retake", for: .normal)
         retakeBtn.setTitleColor(UIColor.orange, for: .normal)
+        retakeBtn.addTarget(self, action: #selector(self.retakeAction), for: .touchUpInside)
         
         keepScanBtn.setTitle("Keep Scan", for: .normal)
         keepScanBtn.setTitleColor(UIColor.orange, for: .normal)
-        
-        
-        
+        keepScanBtn.addTarget(self, action: #selector(self.keepScanAction), for: .touchUpInside)
+    }
+    
+    @objc func retakeAction(){
+        guard image != nil else{return}
+        let newImage = UIImage().cropImage(image: image!, path: drawView.bezierPath)
+        imageContainer.image = newImage
+    }
+    
+    @objc func keepScanAction(){
         
     }
     

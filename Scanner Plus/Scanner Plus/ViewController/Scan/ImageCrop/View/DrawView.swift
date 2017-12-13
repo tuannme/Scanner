@@ -53,6 +53,20 @@ class DrawView: UIView {
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let moveView = moveView{
             guard let touch = touches.first?.location(in: self) else{return}
+            
+            switch moveView{
+            case circleViews[0]:
+                break
+            case circleViews[1]:
+                break
+            case circleViews[2]:
+                break
+            case circleViews[3]:
+                break
+            default:
+                break
+            }
+            
             moveView.center = touch
             setNeedsDisplay()
         }
@@ -65,11 +79,6 @@ class DrawView: UIView {
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         moveView = nil
     }
-    
-    
-    
-    
-    
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
@@ -87,8 +96,63 @@ class DrawView: UIView {
         }
         bezierPath.close()
         
+        UIColor.clear.setFill()
         UIColor.white.setStroke()
         bezierPath.stroke()
+        bezierPath.fill()
+        
+        borderBackgroundView()
+        
+    }
+    
+    func borderBackgroundView(){
+        
+        let topLeft = CGPoint(x: 0, y: 0)
+        let topRight = CGPoint(x: frame.width, y: 0)
+        let bottomLeft = CGPoint(x: 0, y: frame.height)
+        let bottomRight = CGPoint(x: frame.width, y: frame.height)
+        
+        let path1 = UIBezierPath()
+        path1.move(to: topLeft)
+        path1.addLine(to: circleViews[0].center)
+        path1.addLine(to: circleViews[1].center)
+        path1.addLine(to: topRight)
+        path1.close()
+        
+        let path2 = UIBezierPath()
+        path2.move(to: topRight)
+        path2.addLine(to: circleViews[1].center)
+        path2.addLine(to: circleViews[2].center)
+        path2.addLine(to: bottomRight)
+        path2.close()
+        
+        let path3 = UIBezierPath()
+        path3.move(to: bottomRight)
+        path3.addLine(to: circleViews[2].center)
+        path3.addLine(to: circleViews[3].center)
+        path3.addLine(to: bottomLeft)
+        path3.close()
+        
+        let path4 = UIBezierPath()
+        path4.move(to: bottomLeft)
+        path4.addLine(to: circleViews[3].center)
+        path4.addLine(to: circleViews[0].center)
+        path4.addLine(to: topLeft)
+        path4.close()
+        
+        UIColor.black.withAlphaComponent(0.5).setFill()
+        UIColor.clear.setStroke()
+        path1.stroke()
+        path1.fill()
+        
+        path2.stroke()
+        path2.fill()
+        
+        path3.stroke()
+        path3.fill()
+        
+        path4.stroke()
+        path4.fill()
         
     }
     

@@ -27,6 +27,8 @@
 		DF2AC0C21FDFB9F800583152 /* DUBounceAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2AC0C11FDFB9F800583152 /* DUBounceAnimation.swift */; };
 		DF2AC0C41FDFBA0F00583152 /* DUFumeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2AC0C31FDFBA0F00583152 /* DUFumeAnimation.swift */; };
 		DF2AC0C71FDFC84A00583152 /* DUFrameAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2AC0C61FDFC84A00583152 /* DUFrameAnimation.swift */; };
+		DF4895661FE0C7AB00735F20 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4895651FE0C7AB00735F20 /* UIImage.swift */; };
+		DF4895691FE0E51500735F20 /* DUCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4895681FE0E51500735F20 /* DUCameraViewController.swift */; };
 		DFD47FFA1FDE56F30064C929 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD47FF91FDE56F30064C929 /* AppDelegate.swift */; };
 		DFD47FFF1FDE56F30064C929 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFD47FFD1FDE56F30064C929 /* Main.storyboard */; };
 		DFD480011FDE56F30064C929 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFD480001FDE56F30064C929 /* Assets.xcassets */; };
@@ -77,6 +79,8 @@
 		DF2AC0C11FDFB9F800583152 /* DUBounceAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DUBounceAnimation.swift; sourceTree = "<group>"; };
 		DF2AC0C31FDFBA0F00583152 /* DUFumeAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DUFumeAnimation.swift; sourceTree = "<group>"; };
 		DF2AC0C61FDFC84A00583152 /* DUFrameAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DUFrameAnimation.swift; sourceTree = "<group>"; };
+		DF4895651FE0C7AB00735F20 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		DF4895681FE0E51500735F20 /* DUCameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DUCameraViewController.swift; sourceTree = "<group>"; };
 		DFD47FF61FDE56F30064C929 /* Scanner Plus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Scanner Plus.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFD47FF91FDE56F30064C929 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFD47FFE1FDE56F30064C929 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -153,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				CA71EA311FE02A16002DCFA9 /* ScannerViewController.swift */,
+				DF4895671FE0E4F900735F20 /* Camera */,
 				CA563B9B1FE025D50060DE7F /* ImageCrop */,
 			);
 			path = Scan;
@@ -197,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				CA71EA331FE02F2A002DCFA9 /* UIApplication.swift */,
+				DF4895651FE0C7AB00735F20 /* UIImage.swift */,
 			);
 			path = Extentsion;
 			sourceTree = "<group>";
@@ -313,6 +319,14 @@
 				DF2AC0C61FDFC84A00583152 /* DUFrameAnimation.swift */,
 			);
 			path = FrameAnimaton;
+			sourceTree = "<group>";
+		};
+		DF4895671FE0E4F900735F20 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				DF4895681FE0E51500735F20 /* DUCameraViewController.swift */,
+			);
+			path = Camera;
 			sourceTree = "<group>";
 		};
 		DFD47FED1FDE56F30064C929 = {
@@ -601,6 +615,7 @@
 				DF2AC0BE1FDFB9BA00583152 /* DUTransitionAnimation.swift in Sources */,
 				CAC46D431FDEB9C6004FC7D4 /* DUTabbarItemMain.swift in Sources */,
 				DF2AC0B61FDF902E00583152 /* DUBaseCustomView.swift in Sources */,
+				DF4895661FE0C7AB00735F20 /* UIImage.swift in Sources */,
 				CA71EA361FE035DE002DCFA9 /* DrawView.swift in Sources */,
 				DFD47FFA1FDE56F30064C929 /* AppDelegate.swift in Sources */,
 				DFD4802B1FDE75010064C929 /* HomeViewController.swift in Sources */,
@@ -608,6 +623,7 @@
 				DF2AC0C41FDFBA0F00583152 /* DUFumeAnimation.swift in Sources */,
 				CA563B9A1FE024CC0060DE7F /* DUImageCropViewController.swift in Sources */,
 				DF2AC0B21FDF8A1600583152 /* DURotationAnimation.swift in Sources */,
+				DF4895691FE0E51500735F20 /* DUCameraViewController.swift in Sources */,
 				DF2AC0C71FDFC84A00583152 /* DUFrameAnimation.swift in Sources */,
 				DFD480301FDE75640064C929 /* DUTabbarView.swift in Sources */,
 				CA71EA321FE02A16002DCFA9 /* ScannerViewController.swift in Sources */,
