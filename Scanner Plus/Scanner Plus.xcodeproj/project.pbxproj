@@ -36,7 +36,7 @@
 		DFD480041FDE56F30064C929 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFD480021FDE56F30064C929 /* LaunchScreen.storyboard */; };
 		DFD4800F1FDE56F40064C929 /* Scanner_PlusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD4800E1FDE56F40064C929 /* Scanner_PlusTests.swift */; };
 		DFD4801A1FDE56F40064C929 /* Scanner_PlusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD480191FDE56F40064C929 /* Scanner_PlusUITests.swift */; };
-		DFD4802B1FDE75010064C929 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD4802A1FDE75010064C929 /* HomeViewController.swift */; };
+		DFD4802B1FDE75010064C929 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD4802A1FDE75010064C929 /* MainViewController.swift */; };
 		DFD4802D1FDE75160064C929 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD4802C1FDE75160064C929 /* BaseViewController.swift */; };
 		DFD480301FDE75640064C929 /* DUTabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD4802F1FDE75640064C929 /* DUTabbarView.swift */; };
 		DFD480321FDE75740064C929 /* DUTabbarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFD480311FDE75740064C929 /* DUTabbarView.xib */; };
@@ -95,7 +95,7 @@
 		DFD480151FDE56F40064C929 /* Scanner PlusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Scanner PlusUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFD480191FDE56F40064C929 /* Scanner_PlusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scanner_PlusUITests.swift; sourceTree = "<group>"; };
 		DFD4801B1FDE56F40064C929 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DFD4802A1FDE75010064C929 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		DFD4802A1FDE75010064C929 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		DFD4802C1FDE75160064C929 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		DFD4802F1FDE75640064C929 /* DUTabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DUTabbarView.swift; sourceTree = "<group>"; };
 		DFD480311FDE75740064C929 /* DUTabbarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DUTabbarView.xib; sourceTree = "<group>"; };
@@ -236,12 +236,12 @@
 			path = Items;
 			sourceTree = "<group>";
 		};
-		DF2AC0A81FDF744E00583152 /* Home */ = {
+		DF2AC0A81FDF744E00583152 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				DFD4802A1FDE75010064C929 /* HomeViewController.swift */,
+				DFD4802A1FDE75010064C929 /* MainViewController.swift */,
 			);
-			path = Home;
+			path = Main;
 			sourceTree = "<group>";
 		};
 		DF2AC0AD1FDF88CD00583152 /* Anim */ = {
@@ -340,6 +340,13 @@
 			path = Camera;
 			sourceTree = "<group>";
 		};
+		DFBED8011FE23A4500636BC1 /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HomePage;
+			sourceTree = "<group>";
+		};
 		DFD47FED1FDE56F30064C929 = {
 			isa = PBXGroup;
 			children = (
@@ -399,10 +406,11 @@
 		DFD480281FDE74DF0064C929 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				DFBED8011FE23A4500636BC1 /* HomePage */,
 				DF2AC0B41FDF900600583152 /* Base */,
 				CA71EA391FE04DC8002DCFA9 /* Tabbar */,
 				CA563B981FE024780060DE7F /* Scan */,
-				DF2AC0A81FDF744E00583152 /* Home */,
+				DF2AC0A81FDF744E00583152 /* Main */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -629,7 +637,7 @@
 				DF4895661FE0C7AB00735F20 /* UIImage.swift in Sources */,
 				CA71EA361FE035DE002DCFA9 /* DrawView.swift in Sources */,
 				DFD47FFA1FDE56F30064C929 /* AppDelegate.swift in Sources */,
-				DFD4802B1FDE75010064C929 /* HomeViewController.swift in Sources */,
+				DFD4802B1FDE75010064C929 /* MainViewController.swift in Sources */,
 				CA71EA341FE02F2A002DCFA9 /* UIApplication.swift in Sources */,
 				DF2AC0C41FDFBA0F00583152 /* DUFumeAnimation.swift in Sources */,
 				CA563B9A1FE024CC0060DE7F /* DUImageCropViewController.swift in Sources */,

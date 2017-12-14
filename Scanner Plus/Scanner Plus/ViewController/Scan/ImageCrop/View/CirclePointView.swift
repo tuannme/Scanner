@@ -26,6 +26,13 @@ class CirclePointView: UIView {
         clipsToBounds = true
     }
     
+    func setTouch(){
+        transform = CGAffineTransform(scaleX: 2, y: 2)
+    }
+    
+    func endTouch(){
+        transform = CGAffineTransform(scaleX: 1, y: 1)
+    }
 
 
 }

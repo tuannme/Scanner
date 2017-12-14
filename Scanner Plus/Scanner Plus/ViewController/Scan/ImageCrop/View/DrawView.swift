@@ -51,6 +51,7 @@ class DrawView: UIView {
             guard let touch = touches.first?.location(in: circleView) else{return}
             if touch.x > -size/2 && touch.y > -size/2 && touch.x <= size && touch.y <= size{
                 moveView = circleView
+                moveView?.setTouch()
                 break
             }
         }
@@ -63,45 +64,57 @@ class DrawView: UIView {
             
             switch moveView{
             case circleViews[0]:
-                let side1 = checkPointSideOfLine(checkPoint: circleViews[0].center,
-                                     firstPoint: circleViews[1].center,
-                                     endPoint: circleViews[2].center)
-                
-                let side2 = checkPointSideOfLine(checkPoint: circleViews[0].center,
-                                     firstPoint: circleViews[2].center,
-                                     endPoint: circleViews[3].center)
-                
-                print("side1 \(side1.rawValue) __ side2 \(side2.rawValue)")
+                let intersect1 = doIntersect(p1: touch,
+                                         q1: circleViews[3].center,
+                                         p2: circleViews[1].center,
+                                         q2: circleViews[2].center)
+                let intersect2 = doIntersect(p1: touch,
+                                         q1: circleViews[1].center,
+                                         p2: circleViews[2].center,
+                                         q2: circleViews[3].center)
+                if intersect1 || intersect2{
+                    return
+                }
                 
                 break
             case circleViews[1]:
-                checkPointSideOfLine(checkPoint: circleViews[1].center,
-                                     firstPoint: circleViews[2].center,
-                                     endPoint: circleViews[3].center)
-                
-                checkPointSideOfLine(checkPoint: circleViews[1].center,
-                                     firstPoint: circleViews[0].center,
-                                     endPoint: circleViews[3].center)
-                
+                let intersect1 = doIntersect(p1: touch,
+                                             q1: circleViews[0].center,
+                                             p2: circleViews[2].center,
+                                             q2: circleViews[3].center)
+                let intersect2 = doIntersect(p1: touch,
+                                             q1: circleViews[2].center,
+                                             p2: circleViews[0].center,
+                                             q2: circleViews[3].center)
+                if intersect1 || intersect2{
+                    return
+                }
                 break
             case circleViews[2]:
-                checkPointSideOfLine(checkPoint: circleViews[2].center,
-                                     firstPoint: circleViews[3].center,
-                                     endPoint: circleViews[0].center)
-                
-                checkPointSideOfLine(checkPoint: circleViews[2].center,
-                                     firstPoint: circleViews[0].center,
-                                     endPoint: circleViews[1].center)
-                
+                let intersect1 = doIntersect(p1: touch,
+                                             q1: circleViews[1].center,
+                                             p2: circleViews[0].center,
+                                             q2: circleViews[3].center)
+                let intersect2 = doIntersect(p1: touch,
+                                             q1: circleViews[3].center,
+                                             p2: circleViews[1].center,
+                                             q2: circleViews[0].center)
+                if intersect1 || intersect2{
+                    return
+                }
                 break
             case circleViews[3]:
-                checkPointSideOfLine(checkPoint: circleViews[3].center,
-                                     firstPoint: circleViews[0].center,
-                                     endPoint: circleViews[1].center)
-                
-                checkPointSideOfLine(checkPoint: circleViews[3].center,
-                                     firstPoint: circleViews[1].center,
-                                     endPoint: circleViews[2].center)
+                let intersect1 = doIntersect(p1: touch,
+                                             q1: circleViews[2].center,
+                                             p2: circleViews[0].center,
+                                             q2: circleViews[1].center)
+                let intersect2 = doIntersect(p1: touch,
+                                             q1: circleViews[0].center,
+                                             p2: circleViews[1].center,
+                                             q2: circleViews[2].center)
+                if intersect1 || intersect2{
+                    return
+                }
                 break
             default:
                 break
@@ -112,25 +125,13 @@ class DrawView: UIView {
         }
     }
     
-    fileprivate func checkPointSideOfLine(checkPoint:CGPoint,firstPoint:CGPoint,endPoint:CGPoint) -> Side{
-        let d = (checkPoint.x - firstPoint.x)*(endPoint.y - firstPoint.y) - (checkPoint.y - firstPoint.y)*(endPoint.x - endPoint.y)
-        if d == 0 {
-            //print("InLine")
-            return .InLine
-        }
-        if d > 0{
-            //print("Right")
-            return .Left
-        }
-        //print("Left")
-        return .Right
-    }
-    
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        moveView?.endTouch()
         moveView = nil
     }
     
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+        moveView?.endTouch()
         moveView = nil
     }
     
@@ -207,6 +208,64 @@ class DrawView: UIView {
         
         path4.stroke()
         path4.fill()
+        
+    }
+}
+
+extension DrawView{
+    fileprivate func onSegment(p:CGPoint,q:CGPoint,r:CGPoint)->Bool{
+        if (q.x <= max(p.x, r.x) && q.x >= min(p.x, r.x) &&
+            q.y <= max(p.y, r.y) && q.y >= min(p.y, r.y)){
+            return true
+        }
+        return false
+    }
+    
+    fileprivate func orientation(p:CGPoint,q:CGPoint,r:CGPoint) -> Int {
+        let val = (q.y - p.y) * (r.x - q.x) - (q.x - p.x) * (r.y - q.y)
+        
+        if (val == 0){
+            return 0
+        }  // colinear
+        
+        return val > 0 ? 1: 2 // clock or counterclock wise
+    }
+    
+    fileprivate func doIntersect(p1:CGPoint,q1:CGPoint,p2:CGPoint,q2:CGPoint)-> Bool{
+        // Find the four orientations needed for general and
+        // special cases
+        let o1 = orientation(p: p1, q: q1, r: p2)
+        let o2 = orientation(p: p1, q: q1, r: q2)
+        let o3 = orientation(p: p2, q: q2, r: p1)
+        let o4 = orientation(p: p2, q: q2, r: q1)
+        
+        // General case
+        if (o1 != o2 && o3 != o4){
+            return true
+        }
+
+        // Special Cases
+        // p1, q1 and p2 are colinear and p2 lies on segment p1q1
+        if (o1 == 0 && onSegment(p: p1, q: p2, r: q1)){
+            return true
+        }
+        
+        // p1, q1 and p2 are colinear and q2 lies on segment p1q1
+        if (o2 == 0 && onSegment(p: p1, q: q2, r: q1)){
+            return true
+        }
+        
+        // p2, q2 and p1 are colinear and p1 lies on segment p2q2
+        if (o3 == 0 && onSegment(p: p2, q: p1, r: q2)){
+            return true
+        }
+        
+        // p2, q2 and q1 are colinear and q1 lies on segment p2q2
+        if (o4 == 0 && onSegment(p: p2, q: q1, r: q2)){
+             return true
+        }
+        
+        return false // Doesn't fall in any of the above cases
         
     }
     

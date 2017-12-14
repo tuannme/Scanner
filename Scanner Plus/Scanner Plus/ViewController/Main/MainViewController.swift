@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: DUTabbarViewController {
+class MainViewController: DUTabbarViewController {
 
     @IBOutlet weak var tabbarView: DUTabbarView!
     
@@ -17,7 +17,7 @@ class HomeViewController: DUTabbarViewController {
         
         self.view.bringSubview(toFront: tabbarView)
         
-        let sb = UIStoryboard.init(name: "Camera", bundle: nil)
+        let sb = UIStoryboard.init(name: "Home", bundle: nil)
         let view1 = sb.instantiateViewController(withIdentifier: "TabView1")
         let view2 = sb.instantiateViewController(withIdentifier: "TabView2")
         let view3 = sb.instantiateViewController(withIdentifier: "TabView3")
